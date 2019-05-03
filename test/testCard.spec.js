@@ -5,18 +5,26 @@ const validator = require('../index');
 describe('QUANDO O CARTÃO É VALIDO', () => {
     describe('XXXXXX', () => {
         it('deve retornar true', ()=>{
-            expect(validator.cardValidator(5220147622328021)).to.equal(true);                
+            expect(validator.cardValidator('5220147622328021')).to.equal(true);                
         });       
     });  
+    
    
 }); 
+
+
 
 
 describe('QUANDO O CARTÃO É INVÁLIDO', () => {
      
     describe('e tem mais que 16 números', () => {
         it('deve retornar false', ()=>{
-            expect(validator.cardValidator('52201476223280201')).to.equal(false);
+            expect(validator.cardValidator('52201476223280201111')).to.equal(false);
+        });       
+    });
+    describe('e tem menos que 16 números', () => {
+        it('deve retornar false', ()=>{
+            expect(validator.cardValidator('786')).to.equal(false);
         });       
     });
     describe('e o primeiro número começa com 0', () => {
@@ -29,6 +37,17 @@ describe('QUANDO O CARTÃO É INVÁLIDO', () => {
             expect(validator.cardValidator('5350810502386790')).to.equal(false);
         });       
     });
+   
 
 
+}); 
+
+describe('TESTA FUNÇÃO VERIFY', () => {
+    describe('TESTA FUNÇÃO VERIFY', () => {
+        it('deve retornar false', ()=>{
+            expect(validator.verify(8877)).to.equal(false);
+        });       
+    });
+    
+   
 }); 
