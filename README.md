@@ -15,7 +15,7 @@ $  npm install card-validator-lib-ca
 
 ```node
 
-const cardValidator = require('card-validator-lib');
+const cardValidator = require('card-validator-lib-ca');
 > console.log(cardValidator('5240451823631043'))
 > // returns "true"
 > console.log(cardValidator('5350810502386790'))
