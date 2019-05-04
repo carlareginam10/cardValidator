@@ -7,7 +7,7 @@ Na versão atual é capaz de verificar se um cartão de crédito de 14, 15 ou 16
 
 ```shell
 
-$  npm install card-validator-lib-ca
+$  npm install card-validator-lib-crm
 
 ```
 
@@ -15,7 +15,7 @@ $  npm install card-validator-lib-ca
 
 ```node
 
-const cardValidator = require('card-validator-lib-ca');
+const cardValidator = require('card-validator-lib-crm');
 > console.log(cardValidator('5240451823631043'))
 > // returns "true"
 > console.log(cardValidator('5350810502386790'))
