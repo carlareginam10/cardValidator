@@ -38,11 +38,7 @@ describe('QUANDO O CARTÃO É INVÁLIDO', () => {
             expect(validator.cardValidator('786')).to.equal(false);
         });       
     });
-    describe('e o primeiro número começa com 0', () => {
-        it('deve retornar false', ()=>{
-            expect(validator.cardValidator('0220147622328020')).to.equal(false);
-        });       
-    });
+    
     describe('e o total não é divisivel por 10', () => {
         it('deve retornar false', ()=>{
             expect(validator.cardValidator('5350810502386790')).to.equal(false);
