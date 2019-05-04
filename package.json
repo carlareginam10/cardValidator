@@ -1,7 +1,7 @@
 {
   "name": "card-validator-lib",
   "version": "1.0.0",
-  "description": "",
+  "description": "verifica se o número de um cartão de crédito é valido ou inválido",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
