@@ -7,7 +7,7 @@ Na versão atual é capaz de verificar se um cartão de crédito de 14, 15 ou 14
 
 ```shell
 
-$  npm install card-validator-lib
+$  npm install card-validator-lib-ca
 
 ```
 
