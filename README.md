@@ -15,10 +15,10 @@ $  npm install card-validator-lib-crm
 
 ```node
 
-const cardValidator = require('card-validator-lib-crm');
-> console.log(cardValidator('5240451823631043'))
+const validator = require('card-validator-lib-crm')
+> validator.cardValidator('5240451823631043')
 > // returns "true"
-> console.log(cardValidator('5350810502386790'))
+> validator.cardValidator('5350810502386790')
 > // returns "false"
 
 ```

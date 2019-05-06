@@ -18,8 +18,7 @@ describe('QUANDO O CARTÃO É INVÁLIDO', () => {
         it('deve retornar false', ()=>{
             expect(validator.cardValidator('')).to.equal(false);
         });       
-    });
-    
+    });    
     describe('e o total não é divisivel por 10', () => {
         it('deve retornar false', ()=>{
             expect(validator.cardValidator('5350810502386790')).to.equal(false);
