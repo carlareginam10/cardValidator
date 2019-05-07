@@ -1,4 +1,4 @@
-# Validador de Cartão de Crédito v.1.0.0
+# Validador de Cartão de Crédito v.1.0.1
 
 **Esta biblioteca se destina à validação de cartões de crédito, para uso em aplicações web.**
 Na versão atual é capaz de verificar se um cartão de crédito de 14, 15 ou 16 dígitos é válido ou inválido.

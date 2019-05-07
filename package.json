@@ -1,6 +1,6 @@
 {
   "name": "card-validator-lib-crm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "verifica se o número de um cartão de crédito é valido ou inválido",
   "main": "index.js",
   "scripts": {
