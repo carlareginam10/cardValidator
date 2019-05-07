@@ -13,7 +13,8 @@ $  npm install card-validator-lib-crm
 
 ## Como utilizar:
 
-```
+```node
+
 node
 
 const validator = require('card-validator-lib-crm')
