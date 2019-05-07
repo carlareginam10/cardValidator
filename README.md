@@ -28,5 +28,8 @@ const validator = require('card-validator-lib-crm')
 ## roadmap oficial do projeto
 
 
+#### versão 1.0.1
+- funcionalidades: verifica se o número de um cartão de crédito de 14, 15 ou 16 dígitos é válido ou inválido.
+
 #### versão 1.0.0 
-- funcionalidades: verifica se o número de um cartão de crédito é válido ou inválido.
+- funcionalidades: verifica se o número de um cartão de crédito de 16 dígitos é válido ou inválido.
