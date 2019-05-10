@@ -1,48 +1,30 @@
-function checkSize(cardNumber) {
-    if (cardNumber.length === 15) {
-        return 1;
-    } 
-    if (cardNumber.length === 16 || cardNumber.length === 14) {
-        return 0;
-    } else {
-        return false;
-    }
-} 
-
-function multAndSum(cardNumber) {
-    let sum = 0;
-    let cardArray = [];
-    let size = checkSize(cardNumber);
-    for (let i in cardNumber) {             
+function multiplyNumbers(cardNumber) {
+    const size = cardNumber.length % 2; //Pensar em um nome melhor
+    return cardNumber.split("").map((number) => {
         if (i % 2 === size) {
-            let dig = cardNumber[i] * 2; 
-            if (dig > 9) {    
+            let dig = number * 2;
+            if (dig > 9) {
                 let digOne = dig.toString().substr(0, 1);
                 let digTwo = dig.toString().substr(1, 1);
-                cardArray[i] = parseInt(digOne) + parseInt(digTwo);
+                return parseInt(digOne) + parseInt(digTwo);
             } else {
-                cardArray[i] = parseInt(dig);
-            }                  
-            sum += parseInt(cardArray[i]);      
-        } else {      
-            cardArray[i] = parseInt(cardNumber[i]);
-            sum += parseInt(cardArray[i]);
-        }        
-    }
-    return sum;         
+                return parseInt(dig);
+            }
+        } else {
+            return parseInt(number);
+        }
+    });
 }
 
-function cardValidator(cardNumber) {       
-    if (checkSize(cardNumber) === 0 || checkSize(cardNumber) === 1) {
-        let result = multAndSum(cardNumber);    
-        if (result % 10 === 0) {
-            return true;    
-        } else {
-            return false;    
-        }
-    } else {
-        return false;
+function cardValidator(cardNumber) { 
+    const hasValidSize = cardNumber.length >= 14 || cardNumber.length <= 16;
+    if (hasValidSize) {
+        const cardArray = multiplyNumbers(cardNumber);
+        const result = cardArray.reduce((a, b) => a + b, 0);
+        
+        return result % 10 === 0;
     }
+    return false;
 }
 
 module.exports.cardValidator = cardValidator;
